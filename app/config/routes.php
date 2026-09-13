@@ -44,4 +44,13 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 */
 /** @var object $router **/
 
-$router->get('/', 'Welcome::index');
+$router->get('/', 'AuthController::login');
+$router->get('auth/login', 'AuthController::login');
+$router->post('auth/process_login', 'AuthController::process_login');
+$router->get('auth/logout', 'AuthController::logout');
+$router->get('/products', 'ProductController::index');
+$router->get('/products/{id}', 'ProductController::index'); // Paggamit ng {id} sa LavaLust
+$router->get('/products/edit/{id}', 'ProductController::edit');
+$router->post('/products/update/{id}', 'ProductController::update');
+$router->post('/products/store', 'ProductController::store');
+$router->get('/products/delete/{id}', 'ProductController::delete');

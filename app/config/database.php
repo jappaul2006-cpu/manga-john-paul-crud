@@ -58,16 +58,16 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 */
 
 $database['main'] = array(
-    'driver'	=> getenv('DB_DRIVER') ?: '',
-    'hostname'	=> getenv('DB_HOST') ?: '',
-    'port'		=> getenv('DB_PORT') ?: '',
-    'username'	=> getenv('DB_USER') ?: '',
-    'password'	=> getenv('DB_PASSWORD') ?: '',
-    'database'	=> getenv('DB_NAME') ?: '',
-    'charset'	=> getenv('DB_CHARSET') ?: '',
-    'dbprefix'	=> getenv('DB_PREFIX') ?: '',
+    'driver'     => 'mysql',
+    'hostname'   => getenv('DB_HOST') ?: 'mysql-380c08f8-jappaul2006-2ad4.k.aivencloud.com',
+    'port'       => getenv('DB_PORT') ?: '15734',
+    'username'   => getenv('DB_USER') ?: 'avnadmin',
+    'password'   => getenv('DB_PASSWORD') ?: 'AVNS_mUKNXatoZd997pKbdRV', // Pwede mo itong tanggalin mamaya bago i-deploy
+    'database'   => getenv('DB_NAME') ?: 'aval_db',
+    'charset'    => 'utf8mb4',
+    'dbprefix'   => '',
     // Optional for SQLite
-    'path'      => ''
+    'path'       => ''
 );
 
 ?>
